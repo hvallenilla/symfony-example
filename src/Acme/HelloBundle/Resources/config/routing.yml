@@ -1,0 +1,24 @@
+acme_hello_homepage:
+  pattern:  /
+  defaults: { _controller: AcmeHelloBundle:Hello:index }
+  requirements:
+    _method: GET
+
+acme_hello_about:
+  pattern:  /about
+  defaults: { _controller: AcmeHelloBundle:Page:about }
+  requirements:
+    _method: GET
+
+acme_hello_blog_show:
+  pattern:  /blog/{id}
+  defaults: { _controller: AcmeHelloBundle:Blog:show }
+  requirements:
+      _method:  GET
+      id: \d+
+
+acme_hello_contact:
+  pattern:  /contact
+  defaults: { _controller: AcmeHelloBundle:Page:contact }
+  requirements:
+    _method: GET|POST
